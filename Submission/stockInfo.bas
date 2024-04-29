@@ -90,9 +90,8 @@ Sub getInfo():
     Cells(1, 10).value = "Quarterly Change"
     Cells(1, 11).value = "Percent Change"
     Cells(1, 12).value = "Total Stock Volume"
-    ' Format these real quick... Left-aligned, ...?
+    ' Format these real quick... Left-aligned, ...
     Range(Cells(1, 9), Cells(1, 12)).HorizontalAlignment = xlLeft
-    ' ... format this more? Or perhaps... not.
     
     ' We will need to loop thru our data to output our new columns.
     Dim i As Integer
@@ -156,10 +155,9 @@ Sub getInfo():
     Cells(3, 14).value = "Greatest % Decrease"
     Cells(4, 14).value = "Greatest Total Volume"
     
-    ' Let's format those now: left-aligned, ...?
+    ' Let's format those now: left-aligned, ...
     Range(Cells(1, 15), Cells(1, 16)).HorizontalAlignment = xlLeft
     Range(Cells(2, 14), Cells(4, 14)).HorizontalAlignment = xlLeft
-    ' ... format these more, too? Or perhaps... still no.
     
     ' Now, we loop thru the column "I" and grab relevant information for making our new columns.
     For Each cell In ActiveWorkbook.ActiveSheet.Range("I2:I" & Cells(Rows.Count, 2).End(xlUp).Row)
